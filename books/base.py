@@ -62,7 +62,7 @@ class BaseFeedBook:
     #用此属性还可以实现一天推送多次
     #格式为整形列表，比如每天8点/18点推送，则设置为[8,18]
     #时区则自动使用订阅者的时区
-    deliver_times = []
+    deliver_times = [8,12,16,20]
 
     #设置是否使用readability-lxml(Yuri Baburov)自动处理网页
     #正常来说，大部分的网页，readability处理完后的效果都不错
