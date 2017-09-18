@@ -26,7 +26,7 @@ class BaseFeedBook:
     __author__            = ''
     description           = ''
     max_articles_per_feed = 30
-    oldest_article        = 28800    #下载多长时间之内的文章，小于等于365则单位为天，大于365则单位为秒，0为不限制
+    oldest_article        = 0    #下载多长时间之内的文章，小于等于365则单位为天，大于365则单位为秒，0为不限制28800
     host                  = None # 有些网页的图像下载需要请求头里面包含Referer,使用此参数配置
     network_timeout       = None  # None则使用默认
     fetch_img_via_ssl     = False # 当网页为https时，其图片是否也转换成https
