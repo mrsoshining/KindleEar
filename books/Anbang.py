@@ -17,7 +17,8 @@ class AnBang(BaseFeedBook):
     mastheadfile          = "mh_anbang.gif"
     coverfile             = "cv_anbang.jpg"
     network_timeout       = 60
-    oldest_article        = 1
+    oldest_article        = 14400    #下载多长时间之内的文章，小于等于365则单位为天，大于365则单位为秒，0为不限制,4*60*60
+    deliver_times         = [8,12,16,20]
     feeds = [
             (u'安邦咨询', 'http://www.letscorp.net/archives/category/%E7%BB%8F%E6%B5%8E/anbound'),
            ]
