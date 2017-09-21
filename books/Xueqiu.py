@@ -22,7 +22,8 @@ class Xueqiu(BaseFeedBook):
     page_encoding         = "utf-8"
     mastheadfile          = "mh_xueqiu.gif"
     coverfile             = "cv_xueqiu.jpg"
-    oldest_article        = 1
+    oldest_article        = 14400    #下载多长时间之内的文章，小于等于365则单位为天，大于365则单位为秒，0为不限制,4*60*60
+    deliver_times         = [8,12,16,20]
     fulltext_by_readability = False
 
     remove_tags = ['meta']
