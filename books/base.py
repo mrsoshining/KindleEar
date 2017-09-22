@@ -26,7 +26,7 @@ class BaseFeedBook:
     __author__            = ''
     description           = ''
     max_articles_per_feed = 30
-    oldest_article        = 0    #下载多长时间之内的文章，小于等于365则单位为天，大于365则单位为秒，0为不限制28800
+    oldest_article        = 7    #下载多长时间之内的文章，小于等于365则单位为天，大于365则单位为秒，0为不限制28800
     host                  = None # 有些网页的图像下载需要请求头里面包含Referer,使用此参数配置
     network_timeout       = None  # None则使用默认
     fetch_img_via_ssl     = False # 当网页为https时，其图片是否也转换成https
@@ -62,7 +62,7 @@ class BaseFeedBook:
     #用此属性还可以实现一天推送多次
     #格式为整形列表，比如每天8点/18点推送，则设置为[8,18]
     #时区则自动使用订阅者的时区
-    deliver_times = [8,12,16,20]
+    deliver_times = []
 
     #设置是否使用readability-lxml(Yuri Baburov)自动处理网页
     #正常来说，大部分的网页，readability处理完后的效果都不错
