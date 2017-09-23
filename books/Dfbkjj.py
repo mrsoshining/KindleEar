@@ -3,7 +3,7 @@
 from base import BaseFeedBook
 
 def getBook():
-    return FTChinese
+    return Dfbkjj
 
 class Dfbkjj(BaseFeedBook):
     title                 = u'板块聚焦-东方财富'
